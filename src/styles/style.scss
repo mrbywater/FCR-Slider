@@ -1,0 +1,45 @@
+@import "colors";
+@import "fonts";
+
+@font-face {
+  font-family: 'PhonkSans-Light';
+  src: url('../fonts/PhonkSans-Light.otf') format('opentype');
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: "FixelDisplay", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.centredContainer {
+  height: 100%;
+
+  background-image: url("../media/group-trucks-parked-row.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  > div {
+    background-color: rgb(black, .65);
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    @include flex-center;
+  }
+}
